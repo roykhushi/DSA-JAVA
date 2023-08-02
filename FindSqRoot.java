@@ -1,4 +1,4 @@
-//Find the square root of a given non integer number rounded off to nearest floor integer value.
+//Find the square root of a given non integer number rounded off to nearest floor integer value using binary search.
 
 public class FindSqRoot {
 

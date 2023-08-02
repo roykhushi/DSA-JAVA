@@ -9,12 +9,12 @@ public class FirstOccurrence {
         int end=n-1;
         while(start <= end){
             int mid=start + (end-start)/2;
-            if(arr[mid]==x){
-                index=mid;
-                //to check other occurrences
-                end=mid-1; 
+            if(arr[mid] == x){
+                index = mid;
+                //to check other occurrences possible
+                end = mid-1; //checking on the left side
             }
-            else if(x<arr[mid]){
+            else if(x < arr[mid]){
                 end=mid-1;
             }
             else{
