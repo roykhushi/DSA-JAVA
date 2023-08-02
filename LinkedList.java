@@ -1,3 +1,5 @@
+//Implementing Singly LinkedList from scratch
+
 public class LinkedList{
     static Node head;
     private static int size;
@@ -20,7 +22,7 @@ public class LinkedList{
     }
 
         //adding nodes from head
-        public static void addFirst(int data){
+        public void addFirst(int data){
             //creating a new node
             Node newNode = new Node(data);
             //if the LinkedList is empty--> add a newNode
@@ -34,7 +36,7 @@ public class LinkedList{
         }
 
         //adding nodes from last
-        public static void addLast(int data){
+        public void addLast(int data){
                 Node newNode = new Node(data);
                 if(head == null){
                 head = newNode;
@@ -52,7 +54,7 @@ public class LinkedList{
         }
 
         //deleting nodes from head
-        public static void deleteFirst(){
+        public void deleteFirst(){
             if(head == null){
                 System.out.println("The List is Empty");
                 return;
@@ -62,7 +64,7 @@ public class LinkedList{
         }
 
         //deleting nodes from the tail
-        public static void deleteLast(){
+        public void deleteLast(){
             if(head == null){
                 System.out.println("The list is Empty");
             }
@@ -90,7 +92,7 @@ public class LinkedList{
         }
 
         //printing the list
-        public static void printList(){
+        public void printList(){
             if(head == null){
                 System.out.println("The List is Empty");
             }
@@ -124,6 +126,7 @@ public class LinkedList{
         list.deleteLast();
         list.printList();
        
+       System.out.println(list.getSize()); 
 
     }
    

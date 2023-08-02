@@ -3,7 +3,7 @@
 public class QueueClass1 {
     static class Queue{
         static int arr[];
-        static int size;
+        int size;
         static int rear = -1;
 
         Queue(int n){
@@ -14,12 +14,12 @@ public class QueueClass1 {
 
         
 
-        public static boolean isEmpty(){
+        public boolean isEmpty(){
             return rear == -1;
         }
 
         //enqueue(add)-->O(1)
-        public static int add(int data){
+        public int add(int data){
             //if queue is empty
             if(rear == size-1){
                 System.out.println("Queue is full");
@@ -30,7 +30,7 @@ public class QueueClass1 {
         }
 
         //dequeue(remove)-->O(n)
-        public static int remove(){
+        public int remove(){
             if(isEmpty()){ //if empty 
                 System.out.println("Queue is empty.Nothing to remove");
             }
@@ -44,7 +44,7 @@ public class QueueClass1 {
         }
          
         //peek
-        public static int peek(){
+        public int peek(){
              if(isEmpty()){ //if empty 
                 System.out.println("Stack is empty.Nothing to remove");
             }
