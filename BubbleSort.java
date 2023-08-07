@@ -2,7 +2,7 @@
 //Time Complexity = O(n^2)
 //Space Complexity = O(1)
 //max no of swaps in worst case: n(n-1)/2
-
+//n-1 passes
 public class BubbleSort {
 
 static void bubbleSort(int[] arr){
