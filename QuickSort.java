@@ -9,7 +9,7 @@ Space Complexity: O(logn)
 public class QuickSort {
     public static int partition(int [] arr, int low, int high){
         int pivot = arr[high];
-        int i = low-1; //tracks the amount to be left for the elements smaller than pivot
+        int i = low-1; //tracks the space to be left for the elements smaller than pivot
 
         for(int j=low; j<high;j++){
             if(arr[j]<pivot){
@@ -21,6 +21,7 @@ public class QuickSort {
             }
         }
         //placing pivot at its correct position
+        
         i++; //making place for pivot
         int temp = arr[i];
         arr[i] = pivot;
@@ -42,6 +43,7 @@ public class QuickSort {
     int n = arr.length;
 
     quickSort(arr, 0, n-1);
+    System.out.print("The sorted array using Quick Sort is : ");
     for(int element: arr){
         System.out.print(element+" ");
     }
