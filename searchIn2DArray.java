@@ -1,6 +1,18 @@
 import java.util.Scanner;
 public class searchIn2DArray {
 
+    //function to print the row-wise sum
+    public static void rowWiseSum(int [][] arr,int row,int col){
+        
+        for(int i=0;i<row;i++){
+            int sum = 0;
+            for(int j=0;j<col;j++){
+                sum += arr[i][j];
+            }
+            System.out.println("The sum of row " + i + " is: " + sum);
+        }
+    }
+    //function to check if an element is present in the 2-D array.
     public static boolean isPresent(int [][] arr, int target,int row,int col){
         for(int i=0;i<row;i++){
             for(int j=0;j<col;j++){
@@ -12,6 +24,7 @@ public class searchIn2DArray {
         return false;
     }
     public static void main(String[] args) {
+
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter the number of rows in 2D Array: ");
         int row = sc.nextInt();
@@ -47,6 +60,10 @@ public class searchIn2DArray {
         else{
             System.out.println("Element not found!");
         }
+
+        //printing the row-wise sum
+        System.out.println("The row wise sum of the elments in the 2-D array is : ");
+        rowWiseSum(arr,row,col);
 
         sc.close();
 
